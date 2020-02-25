@@ -1,0 +1,21 @@
+body {
+  width: 100vw;
+}
+
+.box {
+  cursor: pointer;
+  border: 2px solid gray;
+  line-height: 100%;
+  text-align: center;
+  padding-top: 30%;
+  font-size: 45px;
+}
+
+.gameboard {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  height: 350px;
+  width: 350px;
+  margin: 50px auto;
+}
+

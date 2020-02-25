@@ -6,37 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="src/style.css">
-  
+
   <title>Project: JS Tic Tac Toe</title>
 </head>
 
 <body>
-<section class="gameboard">
-  
+  <section class="welcome">
+    <div class="greet">
+      <h2>Tic-Tac-Toe</h2>
+      <h3>Hello, Nice to have you.</h3>
+    </div>
+    <div class="info">
+      <form action="" class="form">
+        <p>Kindly enter your names.</p>
+        <div class="player1">
+          <label for="player1">Player 1</label>
+          <input type="text" name="player1" id="player1" required aria-required="true">
+          <br>
+          <button>Submit</button>
+        </div>
+        <div class="player2">
+          <label for="player2">Player 2</label>
+          <input type="text" name="player2" id="player2" required aria-required="true">
+          <br>
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="gameboard">
+
     <div class="box" data-key="1"> ... </div>
     <div class="box" data-key="2"> ... </div>
     <div class="box" data-key="3"> ... </div>
- 
 
- 
+
+
     <div class="box" data-key="4"> ... </div>
     <div class="box" data-key="5"> ... </div>
     <div class="box" data-key="6"> ... </div>
- 
 
-  
+
+
     <div class="box" data-key="7"> ... </div>
     <div class="box" data-key="8"> ... </div>
     <div class="box" data-key="9"> ... </div>
 
-  </section>  
-
- 
-
-   
-
-   
+  </section>
   <script src="src/tictactoe.js"></script>
-
 </body>
+
 </html>

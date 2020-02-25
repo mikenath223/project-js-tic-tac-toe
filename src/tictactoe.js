@@ -1,30 +1,53 @@
-const board = ['X', 'O', 'X','X','X','O', 'X','X','...'];
+const board = ["X", "O", "X", "X", "X", "O", "X", "X", "..."];
+let cells = document.querySelectorAll(".box");
 
 const game = (() => {
+  const display = () => {
+    board.map((item, index) => {
+      let cell = cells[index];
+      cell.innerHTML = item;
+    });
+  };
 
-    const display = () =>  {
-
-	let cells = document.querySelectorAll(".box");
-	board.map( (item, index) => {
-
-	    let cell = cells[index];
-	    cell.innerHTML = item;
-	    
-	})
+  const checkBox = position => {
+    const boardPos = board[position];
+    if (boardPos !== "X" && boardPos !== "O") {
+      return true;
     }
+    return false;
+  };
 
-    const checkBox = (position) => {
+  const placeMark = (mark, position) => (board[position] = mark);
 
-	if ((board[position] !==  'X') || (board[position] !==  'O')) {
-	    return false
-	}
-	return true;
-
-	
-
+  const gameLogic = (mark, position) => {
+    if (checkBox(position)) {
+      placeMark(mark, position);
+      display();
     }
+  };
 
-    return {display, checkBox}
-    
+  return { display, checkBox, placeMark, gameLogic };
 })();
 
+// game.gameLogic();
+
+
+const checkPlay = (() => {
+  const clickListen = () => {
+    cells.forEach((cell, ind) => {
+      
+      cell.onclick = (e) => {
+        console.log(e.target);
+        e.target.innerHTML = "X"
+      }
+    })
+  };
+
+  // const getChoice = () => {
+
+  // }
+
+  return { clickListen };
+})();
+
+checkPlay.clickListen()
