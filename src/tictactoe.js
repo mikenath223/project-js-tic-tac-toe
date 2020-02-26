@@ -86,7 +86,7 @@ const checkPlay = (() => {
         showRules();
         selectQuery(".info-name").style.display = "none";
         selectQuery(".board-wrapper").style.visibility = "visible";
-        selectQuery(".rules-board-wrap").display = "flex";
+        selectQuery(".rules-board-wrap").classList.add('show-board');
         selectQuery(".gameboard").style.transform = "translate3d(0px, 0, 0px)";
       } else {
         e.target.parentNode.classList.add("vibrate");
