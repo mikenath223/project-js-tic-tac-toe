@@ -1,5 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+
 body {
-  width: 100vw;
+  width: 99vw;
+}
+
+.greet {
+  border-radius: 10px;
+  border: 2px solid rgb(78, 43, 145);
+  text-align: center;
+}
+
+.greet h3 {
+  font-style: italic;
+}
+
+.welcome {
+  font-family: 'Libre Baskerville', Impact, sans-serif;
+  background-color: #ffffff63;
+  position: relative;
+  width: 70%;
+  margin: 10px auto;
+}
+
+.welcome::after {
+  content: '';
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 1200px;
+  height: 700px;
+  border: 1px solid red;
+  z-index: -1;
+  background: url(./assets/clip-uploading.png) 20% 70% no-repeat rgba(107, 102, 102, 0.205);
 }
 
 .box {
@@ -8,7 +41,18 @@ body {
   line-height: 100%;
   text-align: center;
   padding-top: 30%;
-  font-size: 45px;
+  font-size: 70px;
+  font-family: 'Yeon Sung', cursive;
+  color: rgb(255, 0, 0);
+}
+
+.board-wrapper {
+
+}
+
+.turns {
+  width: 80%;
+  text-align: center;
 }
 
 .gameboard {
@@ -17,5 +61,32 @@ body {
   height: 350px;
   width: 350px;
   margin: 50px auto;
+  background-color: #fff;
+  transform: perspective(400px) translate3d(-40px, 0, -40px) scale(1);
+  transition: transform 2s linear;
+}
+
+.form {
+  position: relative;
+  color: #fff;
+  background-color: rgb(34, 46, 116);
+}
+
+.slide-out {
+  position: absolute;
+  top: 50%;
+  transform: translateX(200px) rotate3d(0, 1, 0, 180deg) scale(0);
+  transition: transform 3s;
+}
+
+.rules {
+  height: 0;
+  width: 0;
+  background-color: rgb(0, 65, 161);
+  color: aliceblue;
+  overflow: hidden;
+  position: absolute;
+  top: 15%;
+  transition: height 2s, width 3s;
 }
 

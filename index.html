@@ -17,25 +17,37 @@
       <h3>Hello, Nice to have you.</h3>
     </div>
     <div class="info">
-      <form action="" class="form">
-        <p>Kindly enter your names.</p>
+      <form action="" method="post" id="form" class="form">
+        <p class="info-name">Kindly enter your names.</p>
         <div class="player1">
           <label for="player1">Player 1</label>
-          <input type="text" name="player1" id="player1" required aria-required="true">
+          <input type="text" name="player1" id="player1" class="player1" required aria-required="true">
           <br>
-          <button>Submit</button>
+          <h5 class="play1sub">Submit</h5>
         </div>
         <div class="player2">
           <label for="player2">Player 2</label>
-          <input type="text" name="player2" id="player2" required aria-required="true">
+          <input type="text" name="player2" id="player2" class="player2" required aria-required="true">
           <br>
           <input type="submit" value="Submit">
         </div>
       </form>
     </div>
   </section>
-  <section class="gameboard">
 
+  <section class="rules">
+    <h2>Rules</h2>
+    <p>Here are the rules.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis non porro est, tenetur rerum quasi
+      vitae quaerat recusandae? Fugiat mollitia temporibus nam reprehenderit? Rem neque soluta laudantium sint
+      perspiciatis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis ex omnis numquam maxime quod placeat
+      voluptate nesciunt molestiae excepturi modi natus a qui quaerat quo, quas accusantium, quam illum dolorum!</p>
+  </section>
+
+  <main class="board-wrapper">
+    <h3 class="turns">Turns: <span class="change-turn"></span></h3>
+    <section class="gameboard">
+      
     <div class="box" data-key="1"> ... </div>
     <div class="box" data-key="2"> ... </div>
     <div class="box" data-key="3"> ... </div>
@@ -53,6 +65,8 @@
     <div class="box" data-key="9"> ... </div>
 
   </section>
+  </main>
+
   <script src="src/tictactoe.js"></script>
 </body>
 
