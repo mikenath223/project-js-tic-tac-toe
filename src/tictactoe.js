@@ -1,7 +1,7 @@
 const board = [
-  ["X", "O", "X"],
-  ["X", "X", "O"],
-  ["X", "X", "..."]
+  ["...", "...", "..."],
+  ["...", "...", "..."],
+  ["...", "...", "..."]
 ];
 
 let cells = document.querySelectorAll(".box");
@@ -22,8 +22,19 @@ const game = (() => {
     return false;
   };
 
-  const placeMark = (mark, position) => (board[position] = mark);
+    const placeMark = (position) => {
 
+	if (checkBox(position)) {
+	    countX = board.filter(x => x === 'X').length;
+	    countO = board.filter(y => y === 'O').length;
+	    if (countX > countO) {
+	    board[position] = 'O';
+	    }
+	    else { board[position] = 'X'}
+
+	}
+    }
+    
   const gameLogic = (mark, position) => {
     if (checkBox(position)) {
       placeMark(mark, position);
@@ -100,7 +111,8 @@ const checkPlay = (() => {
   const clickListen = () => {
     cells.forEach((cell, ind) => {
       cell.onclick = e => {
-        e.target.innerHTML = "X";
+          game.placeMark(ind);
+	  game.display();
       };
     });
   };
