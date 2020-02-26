@@ -83,6 +83,7 @@ const checkPlay = (() => {
         e.target.parentNode.classList.add("slide-out");
         showRules();
         selectQuery('.info-name').style.display = 'none';
+        selectQuery('.board-wrapper').style.visibility = 'visible';
       } else {
         e.target.parentNode.classList.add("vibrate");
       }

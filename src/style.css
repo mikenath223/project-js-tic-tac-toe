@@ -3,6 +3,7 @@
 
 body {
   width: 99vw;
+  background-color: rgba(107, 102, 102, 0.1)
 }
 
 .greet {
@@ -19,7 +20,7 @@ body {
   font-family: 'Libre Baskerville', Impact, sans-serif;
   background-color: #ffffff63;
   position: relative;
-  width: 70%;
+  width: 380px;
   margin: 10px auto;
 }
 
@@ -30,9 +31,8 @@ body {
   position: absolute;
   width: 1200px;
   height: 700px;
-  border: 1px solid red;
   z-index: -1;
-  background: url(./assets/clip-uploading.png) 20% 70% no-repeat rgba(107, 102, 102, 0.205);
+  background: url(./assets/clip-uploading.png) center no-repeat;
 }
 
 .box {
@@ -47,11 +47,16 @@ body {
 }
 
 .board-wrapper {
-
+  visibility: hidden;
+  border: 2px solid silver;
+  padding: 0;
+  width: 350px;
 }
 
 .turns {
-  width: 80%;
+  margin: 0;
+  padding: 0 5px;
+  /* width: 80%; */
   text-align: center;
 }
 
@@ -70,6 +75,53 @@ body {
   position: relative;
   color: #fff;
   background-color: rgb(34, 46, 116);
+  width: 380px;
+  height: 400px;
+  border-radius: 15px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.info-name {
+  line-height: 5.5;
+  font-size: 22px;
+  background-color: rgba(76, 0, 130, 0.5);
+  border-radius: 15px;
+}
+
+.vibrate {
+  animation: vibrate 0.1s 4 forwards;
+  /* animation-iteration-count: 3; */
+}
+
+@keyframes vibrate {
+  from {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+label {
+  font-size: 20px;
+}
+
+.submit-input {
+  border: none;
+  background-color: slategrey;
+  font-weight: 600;
+  font-size: 25px;
+  padding: 5px 15px;
+  width: 150px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid rgba(19, 0, 128, 0.5);
 }
 
 .slide-out {
@@ -86,7 +138,7 @@ body {
   color: aliceblue;
   overflow: hidden;
   position: absolute;
-  top: 15%;
+  top: 25%;
   transition: height 2s, width 3s;
 }
 
