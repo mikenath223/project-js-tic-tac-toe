@@ -29,6 +29,7 @@ const game = (() => {
 	    else { board[position] = 'X'}
 
 	}
+	display();
 	checkWin();
     }
     
@@ -42,18 +43,31 @@ const game = (() => {
     const checkWin = () => {
 
 
-	let winner = '';
-	patterns = [[0,1,2], [3,4,5]];
-	patterns.map((p) => {
+
+	patterns = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [2,4,0], [0,4,8] ];
+	patterns.map((p, i) => {
 
 	    if ((board[p[0]] == 'X' && board[p[1]] == 'X' && board[p[2]] == 'X') || (board[p[0]] == 'O'  && board[p[1]] == 'O' && board[p[2]] == 'O'))
-	    {winner = ' A winner ';
+	    {	console.log(p);
+		return setWinner(p);
 	    }
 	});
-	return winner;
+
     }
 
-    return { display, checkBox, placeMark, gameLogic, checkWin };
+  const setWinner = (i) => {
+
+	i.map((item) => { 
+
+    console.log(cells[item]);
+    cells[item].outerHTML = `<div class="box" data-key="${item+1}"> <i class="em em-fire" aria-role="presentation" aria-label="FIRE"></i></div>`
+
+})
+
+
+}
+
+    return { display, checkBox, placeMark, gameLogic, checkWin, setWinner };
 })();
 
 // game.gameLogic();
@@ -123,7 +137,7 @@ const checkPlay = (() => {
     cells.forEach((cell, ind) => {
       cell.onclick = e => {
           game.placeMark(ind);
-	  game.display();
+	  
       };
     });
   };
