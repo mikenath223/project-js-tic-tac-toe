@@ -1,8 +1,4 @@
-const board = [
-  ["...", "...", "..."],
-  ["...", "...", "..."],
-  ["...", "...", "..."]
-];
+const board = ["...", "...", "...","...", "...", "...","...", "...", "..."];
 
 let cells = document.querySelectorAll(".box");
 
@@ -33,6 +29,7 @@ const game = (() => {
 	    else { board[position] = 'X'}
 
 	}
+	checkWin();
     }
     
   const gameLogic = (mark, position) => {
@@ -42,7 +39,21 @@ const game = (() => {
     }
   };
 
-  return { display, checkBox, placeMark, gameLogic };
+    const checkWin = () => {
+
+
+	let winner = '';
+	patterns = [[0,1,2], [3,4,5]];
+	patterns.map((p) => {
+
+	    if ((board[p[0]] == 'X' && board[p[1]] == 'X' && board[p[2]] == 'X') || (board[p[0]] == 'O'  && board[p[1]] == 'O' && board[p[2]] == 'O'))
+	    {winner = ' A winner ';
+	    }
+	});
+	return winner;
+    }
+
+    return { display, checkBox, placeMark, gameLogic, checkWin };
 })();
 
 // game.gameLogic();
