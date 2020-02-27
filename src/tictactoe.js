@@ -51,7 +51,7 @@ function storePlayers (player1, player2){
     const reStart = () => {
 
 	board.forEach((item,index) => {board[index] =  "..."});
-	display();
+;
 
     };
 
@@ -100,7 +100,7 @@ function storePlayers (player1, player2){
     return { display, checkBox, placeMark, gameLogic, checkWin, setWinner, storePlayers, reStart };
 })();
 
-// game.gameLogic();
+
 
 const checkPlay = (() => {
   const playersandTurns = [
@@ -110,7 +110,7 @@ const checkPlay = (() => {
 
     const getInputs = () => {
 
-	// listen for restart
+
     const selectQuery = query => document.querySelector(query);
     const finalSubmitBut = selectQuery("input[type='submit']");
     const player1Submit = selectQuery(".play1sub");
@@ -244,8 +244,8 @@ function storePlayers (player1, player2){
 
     const reStart = () => {
 
-	board.forEach((item,index) => {board[index] =  "..."});
-	display();
+	
+	window.location.reload();
 
     };
 
