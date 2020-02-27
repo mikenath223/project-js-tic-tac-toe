@@ -67,6 +67,20 @@ body {
   display: none;
 }
 
+span .instructions {
+
+line-height: 34px;
+}
+
+.restart-game {
+
+background: mediumblue;
+    border: none;
+    border-radius: 9%;
+    padding: 4%;
+    margin-top: 2%;
+
+}
 .show-board {
   display: flex;
   justify-content: space-between;
