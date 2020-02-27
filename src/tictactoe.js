@@ -149,9 +149,6 @@ const checkPlay = (() => {
   return { clickListen, getInputs };
 })();
 
-checkPlay.clickListen();
-checkPlay.getInputs();
-
 
 // DELETE ABOVE
 
