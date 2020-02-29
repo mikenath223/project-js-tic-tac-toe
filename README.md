@@ -17,7 +17,7 @@
   </h3>
 
   <h3 align="center">
-	 Live Version link - https://alexawesomecode.github.io/Project-Library/
+	 Live Version link - https://alexawesomecode.github.io/project-js-tic-tac-toe/
   </h3>
 
   <p align="center">
@@ -29,7 +29,7 @@
 
 ## Project A Tic Tac Toe Game App
 
-This is a Tic Tac Toe Game App where you can play with a friend this popular game.
+This is a Tic Tac Toe Game App where you play against an opponent takimg turns on a board. By alternately placing 'X' and 'O' on the board.A winner emerges when a player successfully plaxes the same mark either an 'X' or 'O' on the same row, column ir diagonal section of the board
 
 
 ## Snapshot
@@ -79,8 +79,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/alexawesomecode/Project-Tic Tac Toe Game.svg?style=flat-square
-[contributors-url]: https://github.com/alexawesomecode/Project-Tic Tac Toe Game/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/alexawesomecode/project-js-tic-tac-toe.svg?style=flat-square
+[contributors-url]: https://github.com/alexawesomecode/project-js-tic-tac-toe/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/alexawesomecode/Project-Tic Tac Toe Game
 [forks-url]: https://github.com/alexawesomecode/Project-Tic Tac Toe Game/network/members
 [stars-shield]: https://img.shields.io/github/stars/alexawesomecode/Project-Tic Tac Toe Game
