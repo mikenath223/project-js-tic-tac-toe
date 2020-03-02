@@ -7,8 +7,8 @@ const cells = document.querySelectorAll('.box');
 
 const game = (() => {
   const display = () => board.map((item, index) => {
-    const cell = cells[index];
-    cell.innerHTML = item;
+    cells[index].innerHTML = item;
+    return null;
   });
 
   function storePlayers(player1, player2) {
@@ -24,24 +24,33 @@ const game = (() => {
   };
 
   const setWinner = (pattern, winner) => {
-    pattern.map(() => {
-      let winnerName;
-      let loserName;
-      if (winner === 'Player1') {
-        [winnerName, loserName] = players;
-      } else {
-        [loserName, winnerName] = players;
-      }
-      selectQuery('.turns').innerHTML = `${winner}: ${winnerName} won!!!`;
-    });
+    let winnerName;
+    let loserName;
+    let loser;
+    if (winner === 'Player1') {
+      loser = 'Player2';
+      [winnerName, loserName] = players;
+    } else {
+      loser = 'Player1';
+      [loserName, winnerName] = players;
+    }
+    selectQuery(
+      '.turns',
+    ).innerHTML = `${winner}: ${winnerName} won😍🎉!!! <br/> ${loser}: ${loserName} lost😒`;
 
     board.forEach((_item, index) => {
       if (!pattern.includes(index)) {
         board[index] = ':(';
       }
     });
-    display();
+    return display();
   };
+
+  function setTie(player1, player2) {
+    selectQuery(
+      '.turns',
+    ).innerHTML = `No Winner:  ITS A TIE!!! <br/> Thanks for playing ${player1} and ${player2}`;
+  }
 
   const checkWin = () => {
     const patterns = [
@@ -51,12 +60,9 @@ const game = (() => {
       [0, 3, 6],
       [1, 4, 7],
       [2, 5, 8],
-      [2, 4, 0],
+      [2, 4, 6],
       [0, 4, 8],
     ];
-    function setTie() {
-      selectQuery('.turns').innerHTML = 'No Winner:  ITS A TIE!!!';
-    }
 
     return patterns.map(p => {
       if (board[p[0]] === 'X' && board[p[1]] === 'X' && board[p[2]] === 'X') {
@@ -66,8 +72,10 @@ const game = (() => {
         return setWinner(p, 'Player2');
       }
       if (board.indexOf('...') === -1 && board.indexOf(':(') === -1) {
-        return setTie();
+        const [player1, player2] = players;
+        return setTie(player1, player2);
       }
+      return null;
     });
   };
 
@@ -132,21 +140,21 @@ const checkPlay = (() => {
     };
 
     player1Submit.onclick = e => {
+      const parent = e.target.parentNode;
       if (checkVal(player1Name.value)) {
         selectQuery('.player2').style.display = 'block';
-        e.target.parentNode.classList.add('slide-out');
+        parent.classList.add('slide-out');
       } else {
-        e.target.parentNode.classList.add('vibrate');
-        e.target.parentNode.onanimationend = e => {
-          e.classList.remove('vibrate');
-        };
+        parent.classList.add('vibrate');
+        parent.onanimationend = e => e.target.classList.remove('vibrate');
       }
     };
 
     finalSubmitBut.onclick = e => {
+      const { parentNode } = e.target;
       if (checkVal(player2Name.value)) {
         game.storePlayers(player1Name.value, player2Name.value);
-        e.target.parentNode.classList.add('slide-out');
+        parentNode.classList.add('slide-out');
         form.style.display = 'none';
         showRules();
         selectQuery('.info-name').style.display = 'none';
@@ -154,10 +162,8 @@ const checkPlay = (() => {
         selectQuery('.rules-board-wrap').classList.add('show-board');
         selectQuery('.gameboard').style.transform = 'translate3d(0px, 0, 0px)';
       } else {
-        e.target.parentNode.classList.add('vibrate');
-        e.target.parentNode.onanimationend = e => {
-          e.classList.remove('vibrate');
-        };
+        parentNode.classList.add('vibrate');
+        parentNode.onanimationend = e => e.target.classList.remove('vibrate');
       }
     };
   };
