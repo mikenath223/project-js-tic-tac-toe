@@ -8,6 +8,19 @@ body {
   height: 100vh;
 }
 
+noscript {
+  position: fixed;
+  top: 0;
+  left: 35%;
+  z-index: 99;
+  background-color: red;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 23px;
+  animation: slide 3s infinite linear;
+}
+
 .greet {
   border-radius: 10px;
   border: 2px solid rgb(78, 43, 145);
