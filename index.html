@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="src/Normalize.css">
+  <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
+  <title>Project: JS Tic Tac Toe</title>
+</head>
+
+<body>
+  <noscript>You need to enable Javascript to run this app.</noscript>
+  <div class="overlay"></div>
+  <section class="welcome">
+    <div class="greet">
+      <h2>Tic-Tac-Toe</h2>
+      <h3>Hello, Nice to have you.</h3>
+    </div>
+    <div class="info">
+      <form action="" method="post" id="form" class="form">
+        <p class="info-name">Kindly enter your name.</p>
+        <div class="player1 get-info">
+          <label for="player1">Player 1</label>
+          <input type="text" name="player1" id="player1" required aria-required="true">
+          <br>
+          <h5 class="play1sub submit-input">Submit</h5>
+        </div>
+        <div class="player2 get-info">
+          <label for="player2">Player 2</label>
+          <input type="text" name="player2" id="player2" required aria-required="true">
+          <br>
+          <input type="submit" value="Submit" class="submit-input">
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <main class="rules-board-wrap">
+
+    <section class="rules">
+      <h2>Rules</h2>
+      <p>Here are the rules.</p>
+
+
+      <span class="instructions">First player starts with X, second with O.
+Players take turns in placing their marks either 'X' or 'O' on the board.
+You can choose only empty cells to do your mark.
+	First one to do a succession of three marks on the board wins the game(row, column or diagonal).</span>
+</br>
+      <button class="restart-game"> Restart Game</button>  
+    </section>
+    
+    <section class="board-wrapper">
+      <h3 class="turns">Turns: <span class="change-turn"></span></h3>
+      
+      <div class="gameboard">
+        <div class="box" data-key="1"> ... </div>
+        <div class="box" data-key="2"> ... </div>
+        <div class="box" data-key="3"> ... </div>
+
+
+
+        <div class="box" data-key="4"> ... </div>
+        <div class="box" data-key="5"> ... </div>
+        <div class="box" data-key="6"> ... </div>
+
+
+
+        <div class="box" data-key="7"> ... </div>
+        <div class="box" data-key="8"> ... </div>
+        <div class="box" data-key="9"> ... </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="src/tictactoe.js"></script>
+</body>
+
+</html>
