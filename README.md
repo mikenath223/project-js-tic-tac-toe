@@ -33,7 +33,7 @@ This is a Tic Tac Toe Game App where you play against an opponent takimg turns o
 
 
 ## Snapshot
-<img src="src/asset/snapshot.gif" alt="screenshot" width="800" height="500">
+<img src="src/assets/tic-tac-toe.gif" alt="screenshot" width="700" height="400">
 
 
 # Validations
