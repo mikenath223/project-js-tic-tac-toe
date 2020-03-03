@@ -22,7 +22,7 @@
 
   <p align="center">
  A Tic Tac Toe Game Project for Microverse. Its also part of the <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project">Odin project curriculum.</a>
-    <br />
+    <br/>
 
   </p>
 </p>
