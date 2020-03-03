@@ -17,12 +17,12 @@
   </h3>
 
   <h3 align="center">
-	 Live Version link - https://alexawesomecode.github.io/project-js-tic-tac-toe/
+	 Live Version link - https://alexawesomecode.github.io/project-js-tic-tac-toe/index.html
   </h3>
 
   <p align="center">
  A Tic Tac Toe Game Project for Microverse. Its also part of the <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project">Odin project curriculum.</a>
-    <br />
+    <br/>
 
   </p>
 </p>
