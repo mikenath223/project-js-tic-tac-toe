@@ -38,7 +38,7 @@ This is a Tic Tac Toe Game App where you play against an opponent takimg turns o
 
 # Validations
 
--ESLINT
+- ESLINT
 
 # Get Started
 
@@ -48,25 +48,25 @@ Download or clone this [repo here](https://github.com/alexawesomecode/project-js
 
 This project was built with these techologies:
 
-* JAVASCRIPT
+* JavaScript
 * HTML
-* CSS3
+* CSS
 
 # Authors
 
 **Michgolden Ukeje**
 
-- Github: [@mikenath223](https://github.com/mikenath223)
+- GitHub: [@mikenath223](https://github.com/mikenath223)
 - Twitter: [@Michgolden_Nath](https://twitter.com/Michgolden_Nath)
-- Linkedin: [Ukeje Michgolden](https://https://www.linkedin.com/in/michgoldenukeje/)
+- LinkedIn: [Ukeje Michgolden](https://https://www.linkedin.com/in/michgoldenukeje/)
 <br />
 <br />
 
 **Alejandro Andres**
 
-- Github: [@alexawesomecode](https://github.com/alexawesomecode)
+- GitHub: [@alexawesomecode](https://github.com/alexawesomecode)
 - Twitter: [@alexcode0](https://twitter.com/alexcode0)
-- Linkedin: [Alejandro Andres](https://www.linkedin.com/in/alejandro-andres-126592191/)
+- LinkedIn: [Alejandro Andres](https://www.linkedin.com/in/alejandro-andres-126592191/)
 
 # License
 
